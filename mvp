@@ -1,0 +1,14 @@
+Indeed challenge
+
+Log in as a user
+
+Input: User will upload the resume
+
+Output: Scrape keywords from the resume and run search for relevant jobs.
+
+Additional: Track status of job applications
+
+Onur - How to scrap the resume (pdf format)
+Danny - Setting up mlab for the mongodb and job tracker
+Humza - Working with Onur with scraping data
+Amar / Aamir - Troubleshoot
