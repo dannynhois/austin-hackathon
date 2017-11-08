@@ -99,12 +99,12 @@ exports.getFacebook = (req, res, next) => {
  * Web scraping example using Cheerio library.
  */
 exports.getScraping = (req, res, next) => {
-  request.get('https://news.ycombinator.com/', (err, request, body) => {
+  request.get('https://medium.com/topic/technology', (err, request, body) => {
     if (err) { return next(err); }
     const $ = cheerio.load(body);
     const links = [];
-    $('.title a[href^="http"], a[href^="https"]').each((index, element) => {
-      links.push($(element));
+    $('.ui-h2').each((index, element) => {
+      links.push($(element).parent("a").attr("href"));
     });
     res.render('api/scraping', {
       title: 'Web Scraping',
@@ -112,6 +112,7 @@ exports.getScraping = (req, res, next) => {
     });
   });
 };
+
 
 /**
  * GET /api/github
