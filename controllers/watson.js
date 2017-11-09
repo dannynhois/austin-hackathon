@@ -6,7 +6,7 @@ const natural_language_understanding = new NaturalLanguageUnderstandingV1({
 });
 
 // const url = "https://medium.freecodecamp.org/so-whats-this-graphql-thing-i-keep-hearing-about-baf4d36c20cf";
-const url = "https://www.yahoo.com/sports/regarding-liangelo-ball-ucla-case-experts-caution-reading-much-development-170904555.html";
+const url = "https://arstechnica.com/tech-policy/2017/11/whose-fault-is-it-if-something-goes-wrong-after-you-install-amazon-key/";
 const parameters = {
   url:url,
   features: {
@@ -18,8 +18,9 @@ const parameters = {
     keywords: {
       emotion: true,
       sentiment: true,
-      limit: 20
-    }
+      limit: 3
+    },
+    // relations: {}
   }
 };
 
